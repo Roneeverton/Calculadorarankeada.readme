@@ -1,0 +1,22 @@
+# calculadora rankeada
+
+function calcularSaldoRank(vitorias, derrotas) {
+  // Calcula o saldo de partidas rankeadas
+  var saldo = vitorias - derrotas;
+
+  // Verifica o saldo e retorna uma mensagem adequada
+  if (saldo > 0) {
+    return "Você tem um saldo positivo de " + saldo + " partidas rankeadas.";
+  } else if (saldo < 0) {
+    return "Você tem um saldo negativo de " + Math.abs(saldo) + " partidas rankeadas.";
+  } else {
+    return "Você está empatado.";
+  }
+}
+
+// Exemplo de uso da função
+var vitorias = 10;
+var derrotas = 5;
+var resultado = calcularSaldoRank(vitorias, derrotas);
+
+console.log(resultado);  // Imprime: "Você tem um saldo positivo de 5 partidas rankeadas."
